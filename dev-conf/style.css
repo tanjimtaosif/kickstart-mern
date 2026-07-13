@@ -1,0 +1,731 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #111827;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.nav-container {
+    width: 1320px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo {
+    height: 32px;
+    object-fit: contain;
+}
+
+.nav-title {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #111827;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #6b7280;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #111827;
+}
+
+.nav-button {
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.nav-button:hover {
+    background: #1d4ed8;
+}
+
+/* Hero */
+.hero {
+    width: 100%;
+    height: 600px;
+    background-image: url('./assets/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+}
+
+.hero h1 i {
+    font-style: italic;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #e5e7eb;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.hero-button {
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 16px 36px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.hero-button:hover {
+    background: #1d4ed8;
+}
+
+/* Speakers Section */
+.speakers-section {
+    max-width: 1320px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.speakers-section h2 {
+    font-size: 52px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 48px;
+    color: #000000;
+}
+
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 644px);
+    gap: 32px;
+    justify-content: center;
+}
+
+.speaker-card {
+    width: 644px;
+    height: 444px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.speaker-image {
+    width: 100%;
+    height: 312px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.speaker-info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.speaker-track {
+    color: #3b82f6;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+
+.speaker-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+.speaker-title {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Secure Your Spot */
+.secure-spot-section {
+    max-width: 1320px;
+    margin: 100px auto;
+    padding: 0 20px;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.pricing-header h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.pricing-header p {
+    font-size: 18px;
+    color: #6b7280;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(320px, 370px));
+    gap: 32px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.pricing-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card.pro {
+    background: #0b1120;
+    color: #ffffff;
+    border-color: #0b1120;
+}
+
+.plan-name {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6b7280;
+    margin-bottom: 16px;
+}
+
+.pricing-card.pro .plan-name {
+    color: #60a5fa;
+}
+
+.plan-price {
+    font-size: 48px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 4px;
+    line-height: 1;
+}
+
+.pricing-card.pro .plan-price {
+    color: #ffffff;
+}
+
+.plan-sub {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 32px;
+}
+
+.pricing-card.pro .plan-sub {
+    color: #94a3b8;
+}
+
+.plan-features {
+    list-style: none;
+    margin-bottom: 40px;
+    flex: 1;
+}
+
+.plan-features li {
+    font-size: 15px;
+    color: #4b5563;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.plan-features li::before {
+    content: "•";
+    color: #2563eb;
+    font-size: 24px;
+    margin-right: 12px;
+    line-height: 0;
+}
+
+.pricing-card.pro .plan-features li {
+    color: #e2e8f0;
+}
+
+.pricing-btn {
+    width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.pricing-btn.outline {
+    background: #ffffff;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+}
+
+.pricing-btn.outline:hover {
+    background: #eff6ff;
+}
+
+.pricing-btn.solid {
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+}
+
+.pricing-btn.solid:hover {
+    background: #1d4ed8;
+}
+
+.pricing-btn.secondary-outline {
+    background: #ffffff;
+    color: #111827;
+    border: 1px solid #111827;
+}
+
+.pricing-btn.secondary-outline:hover {
+    background: #f3f4f6;
+}
+
+/* Footer */
+.footer {
+    background-color: #0b1120;
+    padding: 40px 0;
+}
+
+.footer-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-logo {
+    height: 20px;
+    object-fit: contain;
+}
+
+.copyright {
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer-right {
+    display: flex;
+    gap: 32px;
+}
+
+.footer-right a {
+    color: #64748b;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer-right a:hover {
+    color: #f8fafc;
+}
+
+/* ==========================================================================
+   Experience Section Styles ("What You'll Experience")
+   ========================================================================== */
+
+:root {
+    --exp-primary: #2563eb;
+    --exp-primary-hover: #1d4ed8;
+    --exp-text-primary: #111827;
+    --exp-text-secondary: #6b7280;
+    --exp-border: #e5e7eb;
+    --exp-bg: #ffffff;
+    --exp-hover-shadow: 0 20px 30px -10px rgba(37, 99, 235, 0.15), 0 8px 16px -6px rgba(37, 99, 235, 0.08);
+    --exp-card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.experience-section {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 100px auto;
+    padding: 80px 24px;
+    background-color: var(--exp-bg);
+    overflow: hidden;
+}
+
+/* Background Subtle Decorative Elements (Dotted Grid & Radial Blur) */
+.experience-bg-decoration {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image: 
+        radial-gradient(#e5e7eb 1.2px, transparent 1.2px),
+        radial-gradient(circle at 50% 20%, rgba(37, 99, 235, 0.04) 0%, transparent 60%);
+    background-size: 28px 28px, 100% 100%;
+    opacity: 0.85;
+}
+
+.experience-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+.experience-header {
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto 64px auto;
+    animation: expFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.experience-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--exp-text-primary);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.experience-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--exp-text-secondary);
+    line-height: 1.65;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* Grid Layout */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+}
+
+/* Card Styling */
+.experience-card {
+    position: relative;
+    background: var(--exp-bg);
+    border: 1px solid var(--exp-border);
+    border-radius: 20px;
+    padding: 44px 40px;
+    box-shadow: var(--exp-card-shadow);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 300ms ease,
+                border-color 300ms ease;
+    outline: none;
+    opacity: 0;
+    animation: expFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Pure CSS Staggered Fade Up Animations */
+.experience-card:nth-child(1) { animation-delay: 0.1s; }
+.experience-card:nth-child(2) { animation-delay: 0.2s; }
+.experience-card:nth-child(3) { animation-delay: 0.3s; }
+.experience-card:nth-child(4) { animation-delay: 0.4s; }
+.experience-card:nth-child(5) { animation-delay: 0.5s; }
+.experience-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Icon Styling & Micro-interaction */
+.card-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: #f0f7ff;
+    color: var(--exp-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), background-color 300ms ease, color 300ms ease;
+}
+
+.card-icon {
+    width: 28px;
+    height: 28px;
+    color: inherit;
+    transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Card Title */
+.card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--exp-text-primary);
+    letter-spacing: -0.015em;
+    line-height: 1.3;
+    margin-bottom: 12px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Expanding Blue Line Accent on Hover */
+.title-accent {
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 2.5px;
+    background-color: var(--exp-primary);
+    border-radius: 2px;
+    transition: width 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Card Description */
+.card-description {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--exp-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Hover & Focus States */
+.experience-card:hover,
+.experience-card:focus-visible {
+    transform: translateY(-8px);
+    border-color: var(--exp-primary);
+    box-shadow: var(--exp-hover-shadow);
+}
+
+.experience-card:hover .card-icon-wrapper,
+.experience-card:focus-visible .card-icon-wrapper {
+    background: var(--exp-primary);
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+.experience-card:hover .card-icon,
+.experience-card:focus-visible .card-icon {
+    transform: scale(1.05);
+}
+
+.experience-card:hover .title-accent,
+.experience-card:focus-visible .title-accent {
+    width: 100%;
+}
+
+.experience-card:focus-visible {
+    outline: 2px solid var(--exp-primary);
+    outline-offset: 4px;
+}
+
+/* Animation Keyframes */
+@keyframes expFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(32px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+    .experience-header,
+    .experience-card {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .experience-card,
+    .card-icon-wrapper,
+    .card-icon,
+    .title-accent {
+        transition: none;
+    }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+    .experience-section {
+        padding: 70px 24px;
+        margin: 80px auto;
+    }
+
+    .experience-title {
+        font-size: 42px;
+    }
+
+    .experience-grid {
+        gap: 28px;
+    }
+
+    .experience-card {
+        padding: 36px 32px;
+    }
+}
+
+@media (max-width: 992px) {
+    .experience-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .experience-title {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 768px) {
+    .experience-section {
+        padding: 60px 20px;
+        margin: 60px auto;
+    }
+
+    .experience-header {
+        margin-bottom: 44px;
+    }
+
+    .experience-title {
+        font-size: 32px;
+    }
+
+    .experience-subtitle {
+        font-size: 16px;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .experience-card {
+        padding: 32px 28px;
+        border-radius: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .experience-title {
+        font-size: 28px;
+    }
+
+    .experience-card {
+        padding: 28px 24px;
+    }
+
+    .card-icon-wrapper {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+
+    .card-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .experience-section {
+        padding: 48px 16px;
+    }
+
+    .experience-card {
+        padding: 24px 20px;
+    }
+}
+
