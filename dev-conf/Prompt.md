@@ -10,7 +10,7 @@ ChatGpt Suggested section:
        networking, and career growth.
 
 ---------------------------------------------------------
-
+ 
 [ Workshops ]      [ Networking ]
 Hands-on labs      Meet founders,
 with experts       engineers & recruiters
