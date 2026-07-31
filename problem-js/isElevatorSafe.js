@@ -5,6 +5,9 @@ function isElevatorSafe(weights) {
 
   let total = 0;
   for (let i = 0; i < weights.length; i++) {
+    if (typeof weights[i] !== "number") {
+      return "Invalid";
+    }
     total += weights[i];
   }
 
